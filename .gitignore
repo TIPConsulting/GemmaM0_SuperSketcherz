@@ -329,3 +329,4 @@ project.lock.json
 *.secret.*
 *.secrets.*
 *.pubxml
+**/__vm/*
