@@ -33,6 +33,9 @@ void loop() {
 	if (digitalRead(touch_T1) == HIGH) {
 		if ((millis() - touch_T1_LastPress) < touch_T1_DblClickTolerance && (millis() - touch_T1_LastChange) > touch_T1_ChangeTolerance)
 		{
+			while (digitalRead(touch_T1)) {
+				delay(1);
+			}
 			digitalWrite(LED_BUILTIN, digitalRead(LED_BUILTIN) ^ 1);
 			touch_T1_LastChange = millis();
 		}
