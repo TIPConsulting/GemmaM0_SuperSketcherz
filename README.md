@@ -7,6 +7,8 @@ The lights are controlled by quickly tapping your feet togeter.
 
 ## Hardware
 
+- 1 x Left shoe
+- 1 x Right shoe
 - 2 x [Adafruit Gemma M0](https://www.adafruit.com/product/3501)
 - 2x 500mAh Liion battery
 - Conductive tape
