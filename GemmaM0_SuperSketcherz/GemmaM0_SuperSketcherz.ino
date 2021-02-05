@@ -4,16 +4,18 @@
  Author:	aalbert
 */
 
-#include <Adafruit_DotStar.h>
 #include <exception>
+#include <Adafruit_DotStar.h>
 
 constexpr auto dot_Numpixels = 1;
 constexpr auto dot_Datapin = 7;
 constexpr auto dot_Clockpin = 8;
 constexpr auto dot_ColorChangeIntervalMillis = 5;
-constexpr auto touch_T1 = 3;
+constexpr auto touch_T1_Pin = 1;
 constexpr auto touch_T1_DblClickTolerance = 250;
 constexpr auto touch_T1_ChangeTolerance = 500;
+constexpr auto led_AuxPin1 = 0;
+constexpr auto led_AuxPin2 = 2;
 
 bool lights_RequestedState = false;
 
@@ -33,18 +35,19 @@ unsigned long touch_T1_LastChange = 0;
 bool touch_BtnDown = false;
 
 
-// the setup function runs once when you press reset or power the board
+// the setup function runs once when you press reset or power the boar+d
 void setup() {
 	Serial.begin(9600);
 	dot.clear();
 	dot.show();
 	pinMode(LED_BUILTIN, OUTPUT);
-	pinMode(touch_T1, INPUT);
+	pinMode(led_AuxPin1, OUTPUT);
+	pinMode(led_AuxPin2, OUTPUT);
+	pinMode(touch_T1_Pin, INPUT_PULLUP);
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() {
-
 	bool didChange = DetectTouchButton();
 	if (didChange)
 	{
@@ -56,7 +59,7 @@ void loop() {
 
 bool DetectTouchButton()
 {
-	if (digitalRead(touch_T1) == HIGH) {
+	if (digitalRead(touch_T1_Pin) == LOW) {
 		if (!touch_BtnDown)
 		{
 			touch_T1_LastTouchInit = millis();
@@ -86,6 +89,8 @@ void RenderLED()
 	if (lights_RequestedState != led_CurrentLightState)
 	{
 		digitalWrite(LED_BUILTIN, lights_RequestedState);
+		digitalWrite(led_AuxPin1, lights_RequestedState);
+		digitalWrite(led_AuxPin2, lights_RequestedState);
 		led_CurrentLightState = lights_RequestedState;
 	}
 }
