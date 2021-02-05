@@ -14,3 +14,6 @@ The lights are controlled by quickly tapping your feet togeter.
 - Conductive tape
 - Misc wires or conductive thread
 
+## Switch Proof of Concept
+
+As a switch, I am using conductive strips that trigger a "button click" when the circuit is closed.  Here is the [proof of concept video](https://github.com/TIPConsulting/GemmaM0_SuperSketcherz/discussions/2) for the double-tap light control.
