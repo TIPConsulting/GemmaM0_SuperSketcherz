@@ -14,6 +14,10 @@ The lights are controlled by quickly tapping your feet togeter.
 - Conductive tape
 - Misc wires or conductive thread
 
+## Design
+
+Each shoe has a pair of exposed leads - one shoe has leads on front, the other shoe has leads on the back.  These leads, when closed, will form a closed circuit like clicking a button.  The leads on the shoes are orthognal to each other, so when you tap the shoes together they will form a \# pattern.  This will close both circuits and instruct the processor to turn on the lights.
+
 ## Switch Proof of Concept
 
 As a switch, I am using conductive strips that trigger a "button click" when the circuit is closed.  Here is the [proof of concept video](https://github.com/TIPConsulting/GemmaM0_SuperSketcherz/discussions/2) for the double-tap light control.
