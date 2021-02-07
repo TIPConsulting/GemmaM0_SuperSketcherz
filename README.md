@@ -16,7 +16,7 @@ The lights are controlled by quickly tapping your feet togeter.
 
 ## Design
 
-Each shoe has a pair of exposed leads - one shoe has leads on front, the other shoe has leads on the back.  These leads, when closed, will form a closed circuit like clicking a button.  The leads on the shoes are orthognal to each other, so when you tap the shoes together they will form a \# pattern.  This will close both circuits and instruct the processor to turn on the lights.
+Each shoe has a pair of exposed leads - one shoe has leads on front, the other shoe has leads on the back.  These leads, when closed, will form a closed circuit like clicking a button.  The leads on the shoes are orthogonal to each other, so when you tap the shoes together they will form a \# pattern.  This will close both circuits and instruct the processor to turn on the lights.
 
 ## Switch Proof of Concept
 
