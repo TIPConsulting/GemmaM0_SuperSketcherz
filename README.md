@@ -21,3 +21,7 @@ Each shoe has a pair of exposed leads - one shoe has leads on front, the other s
 ## Switch Proof of Concept
 
 As a switch, I am using conductive strips that trigger a "button click" when the circuit is closed.  Here is the [proof of concept video](https://github.com/TIPConsulting/GemmaM0_SuperSketcherz/discussions/2) for the double-tap light control.
+
+## Build Process
+
+The design as pictured is feasible, but cost prohibitve.  First off, I don't have that many LEDs and second, I don't want stick things to my one good pair of running shoes.  Instead, I built a downscaled version with house slippers and the built-in LED of the Gemma M0.
