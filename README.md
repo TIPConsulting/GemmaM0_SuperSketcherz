@@ -25,3 +25,7 @@ As a switch, I am using conductive strips that trigger a "button click" when the
 ## Build Process
 
 The design as pictured is feasible, but cost prohibitve.  First off, I don't have that many LEDs and second, I don't want stick things to my one good pair of running shoes.  Instead, I built a downscaled version with house slippers and the built-in LED of the Gemma M0.
+
+I flashed the code from this repo onto each of the Gemmas.  Then I soldered wires onto the Gemma `D1` and `GND` pints - these will be used for the  switch apparatus.  The other ends of those wires were then soldered onto strips of copper foil tape.  I planned to also attach extra LEDs to the microntrollers, but found that they did not operate well at the voltage supplied by the battery. Since the extra lights weren't very visible, I elected to leave them off.
+
+With the wiring and controller assembled, I mounted the devices onto a pair of slippers.  I applied the tape first, taking special care to make sure that would cross each oterh to close their respective circuits.  Then I used bobby pins to affix the controllers and make small pockets for the batteries.  
